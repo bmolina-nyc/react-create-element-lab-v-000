@@ -1,21 +1,20 @@
-//Code React element here
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// testing
 
+const meInReact =
+  React.createElement('div', { className: 'me' },
+    React.createElement('h1', {}, 'An Awesome Person'),
+    React.createElement('p', {}, 'Who is learning React'),
+    React.createElement('ul', { className: 'my-interests' },
+      React.createElement('li', {}, 'JavaScript'),
+      React.createElement('li', {}, 'React'),
+      React.createElement('li', {}, 'Movies'),
+      React.createElement('li', {}, 'Ice cream')
+    )
+  );
 
-
-const meInReact = 
-  React.createElement('div', {className:'me'},
-    React.createElement('h1', {}, "An Awesome Person"),
-    React.createElement('p', {}, "Who is learning React"),
-
-  React.createElement('ul', {className: 'me_interests'},
-    [
-      React.createElement('li', {className: 'JS'}, "JavaScript"),
-      React.createElement('li', {className: 'React'}, "React"),
-      React.createElement('li', {className: 'Movies'}, "Movies"), 
-      React.createElement('li', {className: 'Snacks'}, "Ice cream")
-    ]
-  ) // 'ul end' 
-) // 'div end'
-
-
-  ReactDOM.render(meInReact, document.getElementById('main'));
+ReactDOM.render(
+  meInReact,
+  document.getElementById('global')
+);
